@@ -1,5 +1,20 @@
-set1 = {"a", "b" , "c"}
-set2 = {1, 2, 3}
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
 
-set1.update(set2)
-print(set1)
+x.intersection_update(y)
+
+print(x)
+# ------------------------
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+
+x.symmetric_difference_update(y)
+
+print(x)
+# ------------------------
+x = {"apple", "banana", "cherry", True}
+y = {"google", 1, "apple", 2}
+
+z = x.symmetric_difference(y)
+
+print(z)
