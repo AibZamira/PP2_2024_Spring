@@ -1,9 +1,9 @@
 def f(m):
+    c = input()
     for i in range(len(m)):
-        if m[i]["imdb"] >= 5.5:
-            print(True)
-        else:
-            print(False)
+        if m[i]["name"] == c and m[i]["imdb"] >= 5.5:
+            return True
+    return False
 
 movies = [
 {
@@ -82,4 +82,4 @@ movies = [
 "category": "Romance"
 }
 ]
-f(movies)
+print(f(movies))
