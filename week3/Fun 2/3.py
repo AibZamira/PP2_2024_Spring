@@ -1,5 +1,5 @@
 def f(m):
-    c = input()
+    c = input("Category: ")
     for i in range(len(m)):
         if m[i]["category"] == c:
             print(m[i]["name"])

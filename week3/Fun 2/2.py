@@ -2,7 +2,7 @@ def f(m):
     l = []
     for i in range(len(m)):
         if m[i]["imdb"] >= 5.5:
-            l.append(m[i]["imdb"])
+            l.append(m[i]["name"])
 
     print(l)
 
