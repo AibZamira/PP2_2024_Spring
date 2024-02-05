@@ -2,11 +2,11 @@ class String:
     def __init__(self):
         self.consol = ""
     def getString(self):
-        self.concol = input()
+        self.consol = input()
     def printString(self):
-        print(self.concol.upper())
+        print(self.consol.upper())
 
-mystring = String()
-mystring.getString()
-mystring.printString()
+string = String()
+string.getString()
+string.printString()
 

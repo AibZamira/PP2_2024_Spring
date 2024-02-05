@@ -7,11 +7,11 @@ class Square(Shape):
         self.length = length
 
     def area(self):
-        return 0
+        return self.length * self.length
 
 
 shape = Shape()
 print(shape.area())
 
-square = Square(3)
+square = Square(int(input()))
 print(square.area())
