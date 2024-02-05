@@ -11,7 +11,7 @@ class Square(Shape):
 
 
 shape = Shape()
-print(shape.area())
+print(f"Shap's area: {shape.area()}")
 
-square = Square(int(input()))
-print(square.area())
+square = Square(int(input("Length: ")))
+print(f"Square's area: {square.area()}")
