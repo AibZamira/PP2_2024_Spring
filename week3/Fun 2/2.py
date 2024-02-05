@@ -4,7 +4,7 @@ def f(m):
         if m[i]["imdb"] >= 5.5:
             l.append(m[i]["name"])
 
-    print(l)
+    print(f"Good movies - {l}")
 
 movies = [
 {

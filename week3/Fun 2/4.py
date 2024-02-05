@@ -3,7 +3,7 @@ def f(m):
     for i in range(len(m)):
         s = s + m[i]["imdb"]
     a = s / len(m)
-    print(round(a, 1))
+    print(f"Average score: {round(a, 1)}")
 
 movies = [
 {

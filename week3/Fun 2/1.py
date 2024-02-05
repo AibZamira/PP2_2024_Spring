@@ -1,5 +1,5 @@
 def f(m):
-    c = input()
+    c = input("Name of the movie: ")
     for i in range(len(m)):
         if m[i]["name"] == c and m[i]["imdb"] >= 5.5:
             return True

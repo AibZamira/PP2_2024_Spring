@@ -1,5 +1,5 @@
 def f(m):
-    c = input()
+    c = input("Category: ")
     s = 0
     cnt = 0
     for i in range(len(m)):
@@ -7,7 +7,7 @@ def f(m):
             s = s + m[i]["imdb"]
             cnt += 1
     a = s / cnt
-    print(round(a, 1))
+    print(f"Average score: {round(a, 1)}")
 
 movies = [
 {
