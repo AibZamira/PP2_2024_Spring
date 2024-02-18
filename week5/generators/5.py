@@ -6,4 +6,6 @@ def gen(n):
 n = int(input("Enter the number: "))
 s = ""
 for x in gen(n):
-    print(x)
+    s += str(x) + " "
+s = s.strip()
+print(s)
