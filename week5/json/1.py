@@ -6,9 +6,8 @@ print("-------------------------------------------------- --------------------  
 
 with open("sample-data.json", "r") as js_file:
     j = json.load(js_file)
-for it in j["imdata"]:
-    print(f"{it["l1PhysIf"]["attributes"]["dn"]}                              {it["l1PhysIf"]["attributes"]["speed"]}   {it["l1PhysIf"]["attributes"]["mtu"]}")
+for x in j["imdata"]:
+    print(f"{x["l1PhysIf"]["attributes"]["dn"]}                              {x["l1PhysIf"]["attributes"]["speed"]}   {x["l1PhysIf"]["attributes"]["mtu"]}")
 
 
 
-    
