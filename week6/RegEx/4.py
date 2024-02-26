@@ -1,6 +1,7 @@
 import re
 
 s = input()
-pattern = r"[A-Z][a-z]*"
+pattern = r"[A-Z][a-z]"
 x = re.findall(pattern, s)
-print(x)
+y = "".join(x)
+print(y)
