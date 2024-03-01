@@ -25,5 +25,5 @@ def f(path):
                         print(i.name)
     
 
-path = "../../"
+path = input()
 f(path)
