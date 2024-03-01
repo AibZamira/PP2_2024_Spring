@@ -15,3 +15,4 @@ def test(pattern, testData, testNumber, expectedResult):
 pattern = r'(?P<Z>[A-Z][a-z]*)'
 test(pattern, "HelloWorld", "test1", "hello_world")
 test(pattern, "MySuperTestForYou", "test1", "my_super_test_for_you")
+test(pattern, "HowToFindTheBasisOfPolynomialsInLinearAlgebra", "test3", "how_to_find_the_basis_of_polynomials_in_linear_algebra")
