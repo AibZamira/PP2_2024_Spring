@@ -1,7 +1,7 @@
 import pygame
 import math
 
-class Figurs:
+class Figures:
     def __init__(self):
         self.x1 = 10
         self.y1 = 10
