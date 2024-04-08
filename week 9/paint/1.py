@@ -27,34 +27,19 @@ def roundline(screen, color, start, end, r = 1):
 
 
 while True:
-    pressed = pygame.key.get_pressed() #pressed button
+    pressed = pygame.key.get_pressed() 
 
     if pressed[pygame.K_r]:
         color = (255, 0, 0)     # Red
         
     elif pressed[pygame.K_b]:
-        color = (0, 0, 255)     # dark blue
+        color = (0, 0, 255)     # Blue
         
     elif pressed[pygame.K_g]:
         color = (0, 255, 0)     # Green
         
-    elif pressed[pygame.K_p]:
-        color = (255, 105, 180) # Pink
-
     elif pressed[pygame.K_y]:
         color = (255, 255, 0)   # Yellow
-
-    elif pressed[pygame.K_o]:
-        color = (255, 165, 0)   # Orange
-
-    elif pressed[pygame.K_d]: 
-        color = (0, 0, 0)       # Black
-   
-    elif pressed[pygame.K_v]: 
-        color = (255, 0, 255)   # Violet
-
-    elif pressed[pygame.K_s]: 
-        color = (0, 191, 255)   # Blue
 
     elif pressed[pygame.K_w]: 
         color = (255, 255, 255) # White
