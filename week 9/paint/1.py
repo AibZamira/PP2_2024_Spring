@@ -1,4 +1,5 @@
-import pygame, math
+import pygame
+import math
 import figures
 
 screen = pygame.display.set_mode((800,600))
@@ -7,12 +8,11 @@ another_layer = pygame.Surface((800, 600))
 figures = figures.Figures()
 
 is_draw = False
-last_pos = (0, 0)
+end_pos = (0, 0)
 color = (255, 255, 255) # Start color
 tool = 'pen'
 radius = 4 # pen radius
 screen.fill((0, 0, 0)) # Black background
-
 
 
 def roundline(screen, color, start, end, r = 1):
@@ -100,7 +100,7 @@ while True:
                 pygame.draw.circle(another_layer, color, event.pos, radius)
                 screen.blit(another_layer, (0, 0))
                 if tool == 'pen':
-                    roundline(another_layer, color, event.pos, last_pos,  radius)
+                    roundline(another_layer, color, event.pos, end_pos, radius)
 
-            last_pos = event.pos
+            end_pos = event.pos
     pygame.display.update()
