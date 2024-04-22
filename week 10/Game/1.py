@@ -14,7 +14,7 @@ conn = psycopg2.connect(
     user='postgres',
     password='76141Zam'
 )
-
+cur = conn.cursor()
 
 def initialize_game():
     pygame.init()
@@ -46,8 +46,8 @@ def checking():
             game_menu(login.get_value())
 
     def get_user_by_login_and_password(login, password):
-        cur = conn.cursor()
-        select_query = f"select * from test_users where login = '{login}' and password = '{password}';"
+        
+        select_query = f"select * from snake_users where login = '{login}' and password = '{password}';"
         cur.execute(select_query)
         return cur.fetchone()
 
@@ -60,17 +60,19 @@ def sign_up():
     main_theme = pygame_menu.themes.THEME_BLUE
     menu = pygame_menu.Menu('Menu', 600, 700, theme=main_theme)
 
-    def checking_usInfo():
+    def checking_usInfo(login, password):
+        
         insert_query = f"insert into snake_users (login, password) values ('{login}', '{password}');"
-        print("User added sucssesefully!")
+        print("User added successfully!")
         cur.execute(insert_query)
         conn.commit()
         checking()
 
     login = menu.add.text_input('New login: ', default='')
     password = menu.add.text_input('New password: ', default='', password=True)
-    menu.add.button('Sign up', checking_usInfo)
+    menu.add.button('Sign up', lambda: checking_usInfo(login.get_value(), password.get_value()))
     menu.mainloop(screen)
+
 
 
 def start_the_game(login):
@@ -170,7 +172,7 @@ def print_text(screen, font, message, x, y, font_color=(0, 0, 0)):
 
 
 def game_menu(login):
-    cur = conn.cursor()
+    
     image = pygame.image.load("images/field.png")
     main_theme = pygame_menu.themes.THEME_BLUE
     menu = pygame_menu.Menu('Menu', 600, 700, theme=main_theme)
@@ -198,7 +200,7 @@ def game_menu(login):
 
 
 def game_over(login, score, level):
-    cur = conn.cursor()
+    
     main_theme = pygame_menu.themes.THEME_BLUE
     menu = pygame_menu.Menu('Game Over', 600, 700, theme=main_theme)
     update_query = f"update snake_users set score = {score}, level = {level} where login = '{login}';"
